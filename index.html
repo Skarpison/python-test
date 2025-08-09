@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>My Python in Browser App</title>
+    <script defer src="https://pyscript.net/releases/2024.11.1/core.js"></script>
+  </head>
+  <body>
+    <h1>Run Python in Browser</h1>
+    <button id="run">Run Program</button>
+    <pre id="out"></pre>
+
+    <script type="py">
+from pyscript import display
+
+def say_hello():
+    display("Hello from Python in the browser!", target="out")
+    </script>
+
+    <script>
+document.getElementById('run').addEventListener('click', () => py.say_hello())
+    </script>
+  </body>
+</html>
