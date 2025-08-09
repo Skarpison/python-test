@@ -2,23 +2,22 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>My Python in Browser App</title>
     <script defer src="https://pyscript.net/releases/2024.11.1/core.js"></script>
   </head>
   <body>
-    <h1>Run Python in Browser</h1>
-    <button id="run">Run Program</button>
+    <p>V.20250809-0913</p>
+    <h1>PyScript button demo</h1>
+    <button id="run">Run</button>
     <pre id="out"></pre>
-
+    
     <script type="py">
+from js import document
 from pyscript import display
 
-def say_hello():
-    display("Hello from Python in the browser!", target="out")
-    </script>
+def say_hello(event=None):
+    display("Hello from Python!", target="out")
 
-    <script>
-document.getElementById('run').addEventListener('click', () => py.say_hello())
+document.getElementById("run").addEventListener("click", say_hello)
     </script>
   </body>
 </html>
